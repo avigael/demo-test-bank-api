@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<main role="main">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Example Bank">
+		<meta name="author" content="avigael <code@gael.cc>">
+		<title>Example Bank</title>
+		<link rel="stylesheet" href="styles.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+			integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	</head>
+
+	<body class="mx-5 my-2">
+		<h1>Example Bank</h1>
+		<h2>Welcome!</h2>
+		<p>Welcome to Example Bank! Check out all that we have to offer below. Have a question? Let us know by clicking
+			the button!</p>
+		<form>
+			<button type="submit" class="btn btn-dark" formaction='javascript:askQuestion();'
+				style="margin-bottom: 10px">I Have a
+				Question</button>
+		</form>
+		<div id="questionArea" style="visibility: hidden;">
+			<p>Ask your question below!</p>
+			<div class="form-floating">
+				<textarea class="form-control mb-3" id="questionField" style="width: 300px"></textarea>
+				<label for="questionField">check console</label>
+			</div>
+
+			<form>
+				<button type="submit" class="btn btn-dark" formaction='javascript:submitQuestion();'>Submit
+					Question</button>
+			</form>
+		</div>
+		<br>
+		<br>
+		<br>
+		<h2>Saying of the Day</h2>
+		<p name="sayingOfTheDay">Java is to JavaScript what Car is to Carpet. - Chris Heilmann</p>
+		<form>
+			<button class="btn btn-dark" type="submit" formaction='javascript:addPizzazz();'>Add Pizzazz</button>
+		</form>
+		<br>
+		<br>
+		<br>
+		<h2>Your Account</h2>
+		<p>Current Balance:</p>
+		<p id="balance">38.92</p>
+		<p>Enter new balance:</p>
+		<input style="margin-bottom: 10px" id="balanceInput" type="text"></input>
+		<form>
+			<button type="submit" class="btn btn-dark" formaction='javascript:saveBalance();'
+				style="margin-bottom: 10px">Save
+				Balance</button>
+		</form>
+
+		<form>
+			<button type="submit" class="btn btn-dark" formaction='javascript:printBalance();'
+				style="margin-bottom: 10px">Print
+				Balance</button>
+		</form>
+
+		<form>
+			<button type="submit" class="btn btn-dark" formaction='javascript:alertBalance();'>Alert Balance</button>
+		</form>
+		<br>
+		<br>
+		<br>
+		<h2>Friends and Family</h2>
+		<table id="friendsAndFamilyBalances" style="margin-bottom: 10px">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Balance</th>
+				</tr>
+			</thead>
+			<tbody>
+
+			</tbody>
+		</table>
+		<form>
+			<button type="submit" class="btn btn-dark" formaction='javascript:loadFriendsAndFamilyData();'>Load
+				Family and Friends
+				Data</button>
+		</form>
+		<br>
+		<br>
+		<br>
+		<h2>Transactions</h2>
+		<table id="personalTransactions" style="margin-bottom: 10px">
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Company</th>
+					<th>Amount</th>
+				</tr>
+			</thead>
+			<tbody>
+
+			</tbody>
+		</table>
+		<form>
+			<button class="btn btn-dark" type="submit" style="margin-bottom: 10px" formaction='javascript:addPersonalTransactionRows();'>
+				<span id="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none"></span>
+				Add Personal Transaction Rows
+			</button>
+		</form>
+		<form>
+			<button type="submit" class="btn btn-dark" formaction='javascript:clearPersonalTransactionRows();'>Clear
+				Rows</button>
+		</form>
+		<br>
+		<br>
+		<br>
+		<!-- FOOTER -->
+		<footer>
+			<p><a href="#">Back to top</a></p>
+		</footer>
+</main>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
